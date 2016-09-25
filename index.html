@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+        <meta content="utf-8" http-equiv="encoding">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/codemirror.css">
+        <link rel="stylesheet" type="text/css" href="css/lesser-dark.css">
+        <script src="simple_safe.js"></script>
+        <script src="safeeditor.js"></script>
+        <script src="codemirror-compressed.js"></script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div id="header">
+                <h1>SafeEditor</h1>
+                <small>(The SAFE network may reset at anytime, make local backups of your work.)</small>
+            </div>
+
+            <div id="middle">
+                <div id="sidebar">
+                    <div id="sidebar-top">
+                        <div class="section-title">App info</div>
+                        <div class="align-right">
+                          <button id="demo_app_button">Load Demo APP</button>
+                            <button id="load_custom_button">Load custom</button></br></br>
+                            <div>App name &nbsp;<input type="text" id="app_name" class="info-input" value="SAFE Demo App"></div>
+                            <div>App version&nbsp;<input type="text" id="app_version" class="info-input" value="0.6.0"></div>
+                            <div>App vendor&nbsp;<input type="text" id="app_vendor" class="info-input" value="MaidSafe"></div>
+                            <div>App id&nbsp;<input type="text" id="app_id" class="info-input" value="com.maidsafe.demo_app"></div>
+                            </br>
+                            <button id="save_custom_button">Save as custom</button></br>
+
+                            </br>
+                            <button id="auth_button">Authorize</button>
+                        </div>
+                    </div>
+                    <div id="sidebar-middle">
+                        <div class="section-title">File system</div>
+                        <div class="align-right">
+                            <div id="subfolder_list"></div>
+                            <div id="file_list"></div>
+                        </div>
+                    </div>
+                    <div id="sidebar-footer">
+                    	<button id="new_file_button" class="new_button">New file</button></br>
+                        <button id="new_public_directory_button" class="new_button">New public directory</button></br>
+                        <button id="new_private_directory_button" class="new_button">New private directory</button></br>
+                    </div>
+                </div>
+                <div id="editor">
+                    <div id="editor-header"></div>
+                    <div id="editor-middle">
+                        <div id="editor-content"></div>
+                    </div>
+                    <div id="editor-footer">
+                        <div id="editor-footer-left">
+                            <div id="busy_container">
+                                <img class="busy_indicator" src="img/rolling.svg">
+                            </div>
+                            <div id="log_status"></div>
+                        </div>
+                        <div id="editor-footer-right">
+                            <small>(Save your changes before viewing another file.)</small>
+                            <button id="save_button">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="footer"><small>DISCLAIMER: This is a work in progress, use it at your own risk.</small></div>
+        </div>
+    </body>
+</html>
